@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgb(233, 233, 233);
+}
+
 .app {
     display: flex;
     align-items: center;
@@ -68,19 +72,32 @@
 .task {
     background-color: rgba(255, 255, 255, 0.1);
     color: #F6F1D1;
+    max-width: 600px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 0.5rem;
     padding: 1rem 3rem;
+    border-radius: 0.2rem;
 }
 
 .check-button, .delete-button {
     background-color: #F6F1D1;
     border: none;
+    margin: 0 0.2rem;
+    padding: 0.5rem;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     outline: none;
     border-radius: 2px;
     cursor: pointer;
+}
+
+.check-button:hover{
+    background-color: rgb(120, 204, 35);
+}
+
+.delete-button:hover{
+    background-color: rgb(255, 37, 37);
 }
 
 .task.done .check-button {
@@ -104,3 +121,13 @@
 .task.done .content {
     text-decoration: line-through;
 }
+
+.content{
+    word-break: break-word;
+    width: 15rem;
+}
+
+.content,.flex{
+    display:inline-block ;
+}
+
